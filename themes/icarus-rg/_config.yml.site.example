@@ -3,22 +3,22 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Rock Golem
+title: Icarus
 subtitle:
-description: ''
-author: Rock Golem
-author_title: Indie Game Developer
-avatar: css/images/golem.png
-location: 'Florida, USA'
+description: Hexo theme - Icarus
+author: PPOffice
+author_title: 'Web Developer & Designer'
+avatar: css/images/avatar.png
+location: 'Harbin, China'
 follow: https://github.com/ppoffice/
 language: en
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://www.rockgolem.com
-root: /
-permalink: :category/:title.html
+url: http://ppoffice.github.io/hexo-theme-icarus
+root: /hexo-theme-icarus/
+permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -66,10 +66,10 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: icarus-rg
+theme: icarus
 
 # Disqus
-disqus_shortname: rockgolem
+# disqus_shortname: hexo-theme-icarus
 
 # DuoShuo
 # duoshuo_shortname: hexo-theme-icarus
@@ -79,5 +79,5 @@ disqus_shortname: rockgolem
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:rockgolem/rockgolem.github.io.git
-  branch: master
+  repository: https://github.com/ppoffice/hexo-theme-icarus.git
+  branch: gh-pages
