@@ -69,7 +69,7 @@ pagination_dir: page
 theme: icarus
 
 # Disqus
-# disqus_shortname: hexo-theme-icarus
+disqus_shortname: rockgolem
 
 # DuoShuo
 # duoshuo_shortname: hexo-theme-icarus
