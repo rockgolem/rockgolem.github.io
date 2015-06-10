@@ -1,0 +1,41 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  Categories: /categories
+  Tags: /tags
+  About: /about
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
+sidebar: right
+widgets:
+- recent_posts
+- category
+- tag
+- tagcloud
+- archive
+- links
+thumbnail: true
+
+# Contacts
+contacts:
+  github: http://github.com/rockgolem
+  twitter: https://twitter.com/rockgolemgames
+  facebook: https://www.facebook.com/rockgolemgames
+  rss: /atom.xml
+
+# Links
+links:
+  WandW: https://game.witcheswarlocks.com
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
