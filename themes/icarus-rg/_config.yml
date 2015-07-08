@@ -1,10 +1,7 @@
 # Header
 menu:
-  Home: /
+  Our Games: /games
   Archives: /archives
-  Categories: /categories
-  Tags: /tags
-  About: /about
 
 # Content
 excerpt_link: Read More
@@ -35,7 +32,7 @@ links:
 # Miscellaneous
 google_analytics:
 favicon: /favicon.png
-twitter:
+twitter: rockgolemgames
 google_plus:
 fb_admins:
 fb_app_id:
