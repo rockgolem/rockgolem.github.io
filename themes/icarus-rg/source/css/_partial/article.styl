@@ -25,12 +25,16 @@
   @extend $block-caption
   float: left
 
-.article-category
+.article-category,.article-author
   float: left
   line-height: 1em
   color: color-default
   .fa-angle-right
     margin: 0 5px
+
+.article-author
+  @extend .article-category
+  margin-right:5px
 
 .article-category-link
   @extend $block-caption

@@ -1,10 +1,7 @@
 # Header
 menu:
-  Home: /
+  Our Games: /games
   Archives: /archives
-  Categories: /categories
-  Tags: /tags
-  About: /about
 
 # Content
 excerpt_link: Read More
