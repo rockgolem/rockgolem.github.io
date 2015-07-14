@@ -1,7 +1,6 @@
 title: New Website Blog
 date: 2015-06-06 21:17:31
-banner: https://www.evernote.com/l/AQbXVL8lRF9JN5FyqkjZRgRxF07DmE3caMwB/image.png
-thumbnail: https://www.evernote.com/l/AQbItxkJn8tHc4Xq9_iuKNIImJqhlGiGfA4B/image.png
+thumbnail: https://blog.rockgolem.com/css/images/golem.png
 category: news
 tags:
   - 'first post'
