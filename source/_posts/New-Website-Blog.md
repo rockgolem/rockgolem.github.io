@@ -1,7 +1,7 @@
 title: New Website Blog
 date: 2015-06-06 21:17:31
 thumbnail: https://blog.rockgolem.com/css/images/golem.png
-category: news
+category: News
 tags:
   - 'first post'
   - blogging
