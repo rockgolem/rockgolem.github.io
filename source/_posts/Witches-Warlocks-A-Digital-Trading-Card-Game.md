@@ -1,5 +1,5 @@
 title: 'Witches & Warlocks: A Digital Trading Card Game'
-date: 2015-07-13 23:35:24
+date: 2015-07-04 23:35:24
 banner: https://www.evernote.com/l/AQbXVL8lRF9JN5FyqkjZRgRxF07DmE3caMwB/image.png
 thumbnail: https://www.evernote.com/l/AQbItxkJn8tHc4Xq9_iuKNIImJqhlGiGfA4B/image.png
 author: Stephen Young

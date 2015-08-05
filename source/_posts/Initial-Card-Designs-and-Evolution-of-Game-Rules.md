@@ -6,7 +6,7 @@ tags:
 category: Game Design
 author: Chris Saylor
 thumbnail: /img/card-design-spell-v1.png
-date: 2015-07-04 10:45:33
+date: 2015-07-13 10:45:33
 ---
 
 
