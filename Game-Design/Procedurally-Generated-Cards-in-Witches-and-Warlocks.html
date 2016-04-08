@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Procedurally Generated Cards in Witches and Warlocks | Rock Golem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Last year I posted a quick synopsis of Witches &amp;amp; Warlocks, a new digital trading card game that we’re working on.  Since then, Chris and I have been working on the core mechanics and multiplayer s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Procedurally Generated Cards in Witches and Warlocks">
+<meta property="og:url" content="https://blog.rockgolem.com/Game-Design/Procedurally-Generated-Cards-in-Witches-and-Warlocks.html">
+<meta property="og:site_name" content="Rock Golem">
+<meta property="og:description" content="Last year I posted a quick synopsis of Witches &amp;amp; Warlocks, a new digital trading card game that we’re working on.  Since then, Chris and I have been working on the core mechanics and multiplayer s">
+<meta property="og:updated_time" content="2016-04-08T13:37:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Procedurally Generated Cards in Witches and Warlocks">
+<meta name="twitter:description" content="Last year I posted a quick synopsis of Witches &amp;amp; Warlocks, a new digital trading card game that we’re working on.  Since then, Chris and I have been working on the core mechanics and multiplayer s">
+<meta name="twitter:creator" content="@rockgolemgames">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href='//fonts.useso.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><i class="logo"></i><span class="site-title">Rock Golem</span></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div class="profile" id="profile-nav">
+          <a id="profile-anchor" href="javascript:;"><img class="avatar" src="/css/images/golem.png"><i class="fa fa-caret-down"></i></a>
+        </div>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="https://blog.rockgolem.com"></form>
+      </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+      
+        <td><a class="main-nav-link" href="/archives">Archives</a></td>
+      
+      <td>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="https://blog.rockgolem.com"></form>
+      </td>
+      </tr>
+    </table>
+  </div>
+</header>
+    <div class="outer">
+      <aside id="profile">
+  <div class="inner profile-inner">
+  	<div class="base-info profile-block">
+		  <img id="avatar" src="/css/images/golem.png">
+      <h2 id="name">Rock Golem</h2>
+      <h3 id="title">Indie Game Developer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Florida, USA</span>
+      <a id="follow" href="https://github.com/rockgolem">FOLLOW</a>
+  	</div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        5
+        <span>posts</span>
+      </div>
+      <div class="article-info-block">
+        8
+        <span>tags</span>
+      </div>
+    </div>
+    
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+        
+          <td><a href="http://github.com/rockgolem" target="_blank" title="github"><i class="fa fa-github"></i></a></td>
+        
+          <td><a href="https://twitter.com/rockgolemgames" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></td>
+        
+          <td><a href="https://www.facebook.com/rockgolemgames" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></td>
+        
+          <td><a href="/atom.xml" target="_blank" title="rss"><i class="fa fa-rss"></i></a></td>
+        
+        </tr>
+      </table>
+    </div>
+    
+  </div>
+</aside>
+      <section id="main"><article id="post-Procedurally-Generated-Cards-in-Witches-and-Warlocks" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      
+	
+		<img src="https://www.evernote.com/l/AQajdM8kKBNN1JzHZb8jVeQPmGKEY8qSjewB/image.png" class="article-banner">
+	
+
+
+
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Procedurally Generated Cards in Witches and Warlocks
+    </h1>
+  
+
+        <div class="article-meta">
+          
+    <div class="article-author">
+        <i class="fa fa-user"></i>
+        <span>Stephen Young</span>
+    </div>
+
+
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/Game-Design/Procedurally-Generated-Cards-in-Witches-and-Warlocks.html">
+    <time datetime="2016-03-22T22:12:42.000Z" itemprop="datePublished">2016-03-22</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Game-Design/">Game Design</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Last year I posted a quick <a href="https://blog.rockgolem.com/Game-Design/Witches-Warlocks-A-Digital-Trading-Card-Game.html">synopsis of Witches &amp; Warlocks</a>, a new digital trading card game that we’re working on.  Since then, <a href="https://twitter.com/cjsaylor" target="_blank" rel="external">Chris</a> and I have been working on the core mechanics and multiplayer systems, and today I want to come up for air and talk about one of the most exciting features: procedurally generated cards.</p>
+<p>Before I can do that, I need to take a step back and explain a bit about the different kinds of cards used in the game, as well as a few fundamental game concepts that influence the procedural generation.</p>
+<a id="more"></a>
+<h2 id="Types_of_Cards">Types of Cards</h2><ul>
+<li>Spell Cards &mdash; these are the most common cards in the game; players combine spell cards to attack their opponents by matching a “port” on one side of the card with a port on another spell card during the Spellcrafting phase.  You can read more about <a href="https://blog.rockgolem.com/Game-Design/Initial-Card-Designs-and-Evolution-of-Game-Rules.html">spell card port design here</a>.</li>
+<li>Scroll Cards &mdash; these cards are canned spells that can be used during any phase, and their effects are usually instantaneous.</li>
+<li>Rune Cards &mdash; these cards grant permanent stat boosts, protection, and other effects to the players.  The player can have up to four rune cards in play at one time, represented by the cardinal directions (North, East, South, West).  A rune card might produce different effects depending on the position in which it is played (these differences are explained in the rules text of the cards).</li>
+</ul>
+<p>When a card is generated, we assign it an element and an artifact, as described below.</p>
+<h2 id="Elemental_Domains">Elemental Domains</h2><p>With the exception of a few non-elemental cards, every card in W&amp;W belongs to one of twelve elemental domains.  These domains dictate the properties of the cards when they are generated.  Here is a list of each element. Next to the element are a few keywords that we consider the general sense of what those domains might feel like.</p>
+<ul>
+<li>Fire &mdash; raw power, destruction, resurrection</li>
+<li>Water &mdash; transference, freezing, cleansing</li>
+<li>Metal &mdash; confinement, fabrication, corrosion</li>
+<li>Air &mdash; breath, electricity, flight</li>
+<li>Spirit &mdash; healing, willpower, protection</li>
+<li>Mental &mdash; ingenuity, engineering, psionics</li>
+<li>Illusion &mdash; misdirection, camouflage, confusion</li>
+<li>Demon &mdash; madness, nightmares, contracts</li>
+<li>Blood &mdash; life, death, poison</li>
+<li>Shadow &mdash; stealth, silence, predation</li>
+<li>Moon &mdash; radiance, energy, sacrifice</li>
+<li>Stone &mdash; defense, weight, bludgeoning</li>
+</ul>
+<p>So, a Fire card might boost raw attack power, while a Spirit card might cause a healing effect.</p>
+<h2 id="Schools_of_Sorcery">Schools of Sorcery</h2><p>Cards in W&amp;W are also associated to one of three schools of sorcery.  Each school contains a grouping of elements and artifacts that might be used when generating a card.</p>
+<h3 id="Classical">Classical</h3><p>This school is rooted in warlock tradition.  It stands for order and balance, and is focused on maintaining equilibrium between offensive sorcery and defensive runes.</p>
+<ul>
+<li><strong>Domains</strong>: Fire, Water, Metal, Air, Spirit</li>
+<li><strong>Artifacts</strong>: Swords, Tomes, Dice, Potions, Rings, Chalices, Formulas, Chains</li>
+</ul>
+<h3 id="Primal">Primal</h3><p>Brute force and savage rituals define this school.  Erupting with flames&mdash;and guided by the light of the moon&mdash;Primal cards focus on attack and sacrifice.</p>
+<ul>
+<li><strong>Domains</strong>: Blood, Shadow, Moon, Stone, Fire</li>
+<li><strong>Artifacts</strong>: Daggers, Pouches, Hands, Roots, Horns, Lizards, Totems, Chants</li>
+</ul>
+<h3 id="Magical">Magical</h3><p>Cards from the Magical school rely on misdirection, manipulation, and control.  They tap into dreams and commune with demonic forces to overpower and debilitate their enemies.</p>
+<ul>
+<li><strong>Domains</strong>: Spirit, Mental, Illusion, Demon, Blood</li>
+<li><strong>Artifacts</strong>: Spheres, Lamps, Essences, Crystals, Wands, Masks, Dreams, Effigies</li>
+</ul>
+<h2 id="How_It_All_Fits_Together">How It All Fits Together</h2><p>At the end of a few matches of W&amp;W, the player may find that they have been awarded a new card to add to their decks.  When we generate this card, we follow a procedure that looks something like this:</p>
+<ol>
+<li>Based on a few factors like win streaks and player level, the rarity of the card is determined.</li>
+<li>The card type (spell, scroll, or rune) is determined.</li>
+<li>A school of sorcery is selected (Classical, Primal, or Magic).</li>
+<li>An element and an artifact from that school are selected at random.</li>
+<li>Now the fun part begins:  Based on the rarity, type, school, element, and artifact, the system adds traits to the card that generate special effects.  For example, maybe the system chooses the following: Uncommon rarity, Spell type, Primal school, Fire element, Dagger artifact.  Based on these factors it selects “armor piercing” (derived from the Dagger) and “burning” (derived from the Fire element) effects. Those traits are applied to the card.</li>
+<li>Damage output, spell card ports, and energy cost are then generated as balancing factors for the card.</li>
+<li>Finally, the card is given a name using an algorithm that takes into account all of the aspects of the card.  Our armor piercing, burning dagger card, for example, might get named “Obscure Dagger of Immolation”</li>
+</ol>
+<p>I’ve left out a few things like difficulty, the quality level of the elements and artifacts and a few other odds and ends, but that’s the gist of how the system works.</p>
+<h2 id="The_End_Result">The End Result</h2><p>With this system in place, we can deliver <a href="http://borderlands.wikia.com/wiki/Borderlands_2" target="_blank" rel="external">gazillions</a> of cards with the potential to generate emergent combinations and gameplay scenarios for which we might not have planned.  Every time we think of a new game mechanic or card trait, we can feed these parameters into the card generator and many new cards will begin to propagate into the game.</p>
+<h2 id="Balance">Balance</h2><p>There is a good chance that game breaking cards will be generated by a system like this, and we’re planning ahead to tackle these problems.  Firstly, obvious breaking combinations will be banned from the generation scripts.  Secondly, we have some tentative plans to use machine learning techniques to identify dominant combinations before they ever go live.</p>
+<p>Inevitably something might slip through the cracks, a savvy user will discover an exploit, or a single strategy might start to dominate the leaderboards.  However, the game world of Witches &amp; Warlocks will be an ever evolving tapestry of mechanics that we will constantly be polishing.  Seasonal changes will be planned, and game breaking cards will be tweaked.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.rockgolem.com/Game-Design/Procedurally-Generated-Cards-in-Witches-and-Warlocks.html" data-id="cimrrectb000h9o0rqc28iee2" class="article-share-link">Share</a>
+      
+        <a href="https://blog.rockgolem.com/Game-Design/Procedurally-Generated-Cards-in-Witches-and-Warlocks.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cards/">cards</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design/">design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proceedural/">proceedural</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/Game-Design/The-Deck-Building-Mechanic.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          The Deck Building Mechanic
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Game-Design/Initial-Card-Designs-and-Evolution-of-Game-Rules.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Initial Card Designs and Evolution of Game Rules</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+</section>
+      
+        <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/Game-Design/The-Deck-Building-Mechanic.html" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Game-Design/">Game Design</a></p>
+              <p class="item-title"><a href="/Game-Design/The-Deck-Building-Mechanic.html" class="title">The Deck Building Mechanic</a></p>
+              <p class="item-date"><time datetime="2016-03-23T04:27:42.000Z" itemprop="datePublished">2016-03-23</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/Game-Design/Procedurally-Generated-Cards-in-Witches-and-Warlocks.html" class="thumbnail">
+  
+    <span style="background-image:url(https://www.evernote.com/l/AQajdM8kKBNN1JzHZb8jVeQPmGKEY8qSjewB/image.png)" alt="Procedurally Generated Cards in Witches and Warlocks" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Game-Design/">Game Design</a></p>
+              <p class="item-title"><a href="/Game-Design/Procedurally-Generated-Cards-in-Witches-and-Warlocks.html" class="title">Procedurally Generated Cards in Witches and Warlocks</a></p>
+              <p class="item-date"><time datetime="2016-03-22T22:12:42.000Z" itemprop="datePublished">2016-03-22</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/Game-Design/Initial-Card-Designs-and-Evolution-of-Game-Rules.html" class="thumbnail">
+  
+    <span style="background-image:url(/img/card-design-spell-v1.png)" alt="Initial Card Designs and Evolution of Game Rules" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Game-Design/">Game Design</a></p>
+              <p class="item-title"><a href="/Game-Design/Initial-Card-Designs-and-Evolution-of-Game-Rules.html" class="title">Initial Card Designs and Evolution of Game Rules</a></p>
+              <p class="item-date"><time datetime="2015-07-13T14:45:33.000Z" itemprop="datePublished">2015-07-13</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/Game-Design/Witches-Warlocks-A-Digital-Trading-Card-Game.html" class="thumbnail">
+  
+    <span style="background-image:url(https://www.evernote.com/l/AQbItxkJn8tHc4Xq9_iuKNIImJqhlGiGfA4B/image.png)" alt="Witches &amp; Warlocks: A Digital Trading Card Game" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Game-Design/">Game Design</a></p>
+              <p class="item-title"><a href="/Game-Design/Witches-Warlocks-A-Digital-Trading-Card-Game.html" class="title">Witches &amp; Warlocks: A Digital Trading Card Game</a></p>
+              <p class="item-date"><time datetime="2015-07-05T03:35:24.000Z" itemprop="datePublished">2015-07-04</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/News/New-Website-Blog.html" class="thumbnail">
+  
+    <span style="background-image:url(https://blog.rockgolem.com/css/images/golem.png)" alt="New Website Blog" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/News/">News</a></p>
+              <p class="item-title"><a href="/News/New-Website-Blog.html" class="title">New Website Blog</a></p>
+              <p class="item-date"><time datetime="2015-06-07T01:17:31.000Z" itemprop="datePublished">2015-06-06</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Game-Design/">Game Design</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/News/">News</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blogging/">blogging</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cards/">cards</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deck-building/">deck building</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design/">design</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/first-post/">first post</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mechanic/">mechanic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proceedural/">proceedural</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rules/">rules</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/blogging/" style="font-size: 10px;">blogging</a> <a href="/tags/cards/" style="font-size: 15px;">cards</a> <a href="/tags/deck-building/" style="font-size: 10px;">deck building</a> <a href="/tags/design/" style="font-size: 20px;">design</a> <a href="/tags/first-post/" style="font-size: 10px;">first post</a> <a href="/tags/mechanic/" style="font-size: 10px;">mechanic</a> <a href="/tags/proceedural/" style="font-size: 10px;">proceedural</a> <a href="/tags/rules/" style="font-size: 10px;">rules</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="https://game.witcheswarlocks.com">WandW</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+  <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Rock Golem<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script>
+  var disqus_shortname = 'rockgolem';
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
