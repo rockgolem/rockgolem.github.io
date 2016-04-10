@@ -13,6 +13,8 @@ Today I'm writing about the [deck building mechanic](https://en.wikipedia.org/wi
 ## What The Heck is a Deck Building Mechanic?
 In a traditional trading/collectible card game players spend time building a deck of cards before playing the game.  So, each player starts the game with radically different, pre-built decks of cards.  However, in a "deck building game" all players typically start a game with a small number of identical cards.  During the game players improve their decks by acquiring various new, more powerful cards, and possibly removing old cards. This mechanic was first popularized by [Dominion](https://boardgamegeek.com/boardgame/36218/dominion), an award winning table-top card game that relied heavily on the mechanic.
 
+<!-- more -->
+
 ## The Advantages
 The most interesting advantage of this mechanic is the players' increased ability to react to an opponent's strategy.  Here's a quick example: you notice that your opponent has acquired some powerful "armor piercing" cards, and they are attacking you.  Until now, you were planning to acquire some strong "armor" cards for defense.  However, now you know this would be futile; you instead pick up some "evasion" cards which should be more effective against their attacks.  Imagine how this would have played out in a traditional card game: you brought a deck that was heavy in armor, and your opponent brought a deck that destroys armor.  The outcome of the game is almost assuredly predetermined; before you played your first card, you lost.
 

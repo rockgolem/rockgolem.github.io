@@ -12,6 +12,8 @@ date: 2015-07-13 10:45:33
 
 Over lunch, Steve and I had a _design sprint_ where the main topic was to discuss our different ideas about how the cards in _Witches and Warlocks_ were to be laid out and function.
 
+<!-- more -->
+
 ## Functionality and Flavor
 
 The card itself needs to convey important information to the player about what the card can do and how to play it, but we also wanted to leave some space to allow for flavor text and art, otherwise it would be boring!
