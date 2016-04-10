@@ -1,7 +1,7 @@
 title: Procedurally Generated Cards in Witches and Warlocks
 date: 2016-03-22 18:12:42
-banner: https://www.evernote.com/l/AQajdM8kKBNN1JzHZb8jVeQPmGKEY8qSjewB/image.png
-thumbnail: https://www.evernote.com/l/AQajdM8kKBNN1JzHZb8jVeQPmGKEY8qSjewB/image.png
+banner: /img/mog-mask.jpg
+thumbnail: /img/mog-mask.jpg
 author: Stephen Young
 category: Game Design
 tags:
