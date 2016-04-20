@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016/4 | Rock Golem</title>
+  <title>Game Dev Diary: Infrastructure Journey | Rock Golem</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rock Golem">
-<meta property="og:url" content="https://blog.rockgolem.com/archives/2016/04/index.html">
+  <meta name="description" content="We’ve been talking about design and game mechanics, and you’ve seen the progress we’ve been making with the client. In this post, we’re going to take a peek under the hood and explore how the game ser">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Game Dev Diary: Infrastructure Journey">
+<meta property="og:url" content="https://blog.rockgolem.com/Game-Dev-Diary/Infrastructure-Journey.html">
 <meta property="og:site_name" content="Rock Golem">
-<meta property="og:description">
+<meta property="og:description" content="We’ve been talking about design and game mechanics, and you’ve seen the progress we’ve been making with the client. In this post, we’re going to take a peek under the hood and explore how the game ser">
+<meta property="og:image" content="https://blog.rockgolem.com/img/event-graph.png">
+<meta property="og:updated_time" content="2016-04-20T14:08:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rock Golem">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Game Dev Diary: Infrastructure Journey">
+<meta name="twitter:description" content="We’ve been talking about design and game mechanics, and you’ve seen the progress we’ve been making with the client. In this post, we’re going to take a peek under the hood and explore how the game ser">
 <meta name="twitter:creator" content="@rockgolemgames">
   
   
@@ -103,77 +105,102 @@
     
   </div>
 </aside>
-      <section id="main">
-      <div class="archive-year-wrap">
-        <a href="/archives/2016" class="archive-year">2016</a>
-      </div>
-      <section class="archives-wrap">
-        <div class="archives">
+      <section id="main"><article id="post-Infrastructure-Journey" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    
-    <div class="archive-article-thumbnail">
-      <a href="/Game-Dev-Diary/Infrastructure-Journey.html" class="thumbnail">
-  
-    <span style="background-image:url(/img/infrastructure-overview.png)" alt="Game Dev Diary: Infrastructure Journey" class="thumbnail-image"></span>
-  
-</a>
-    </div>
-    
-    <header class="archive-article-header">
       
+	
+		<img src="/img/infrastructure-overview.png" class="article-banner">
+	
+
+
+
+    
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Game-Dev-Diary/Infrastructure-Journey.html">Game Dev Diary: Infrastructure Journey</a>
+    <h1 class="article-title" itemprop="name">
+      Game Dev Diary: Infrastructure Journey
     </h1>
   
 
-      
-        <div class="archive-article-date">
+        <div class="article-meta">
+          
+    <div class="article-author">
+        <i class="fa fa-user"></i>
+        <span>Chris Saylor</span>
+    </div>
+
+
+          <div class="article-date">
   <i class="fa fa-calendar"></i>
   <a href="/Game-Dev-Diary/Infrastructure-Journey.html">
-    <time datetime="2016-04-20T14:08:00.000Z" itemprop="datePublished">Apr 20</time>
+    <time datetime="2016-04-20T14:08:00.000Z" itemprop="datePublished">2016-04-20</time>
   </a>
 </div>
-      
-    </header>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Game-Dev-Diary/">Game Dev Diary</a>
   </div>
-</article>
-  
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
+
+        </div>
+      </header>
     
-    <div class="archive-article-thumbnail">
-      <a href="/Game-Dev-Diary/Scrolls-Runes-and-Dice.html" class="thumbnail">
-  
-    <span style="background-image:url(/img/smite-scroll.jpg)" alt="Game Dev Diary: Scrolls, Runes, and Dice" class="thumbnail-image"></span>
-  
-</a>
-    </div>
-    
-    <header class="archive-article-header">
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Game-Dev-Diary/Scrolls-Runes-and-Dice.html">Game Dev Diary: Scrolls, Runes, and Dice</a>
-    </h1>
-  
+        <p>We’ve been talking about design and game mechanics, and you’ve seen the progress we’ve been making with the client. In this post, we’re going to take a peek under the hood and explore how the game servers are put together and how we plan to scale them up.</p>
+<a id="more"></a>
+<h2 id="The_Stack">The Stack</h2><p>First things first, our server code runs on <a href="https://nodejs.org" target="_blank" rel="external">Node.js</a>. As you can see from the above diagram, we are running the application in a microservice architecture. We have a relatively large number of small game services that each perform specific tasks. For example, when you request to join a multiplayer game, the <code>matchmaker</code> service is responsible for finding a game for you. </p>
+<p>Our microservices run in <a href="https://www.docker.com/" target="_blank" rel="external">Docker Containers</a> making them easy to deploy and spin up additional service instances on demand. All of the services communicate in an asynchronous fashion via a message queue application called <a href="https://www.rabbitmq.com/" target="_blank" rel="external">RabbitMQ</a>.</p>
+<p>Finally, each service stores data that it cares about in <a href="https://www.mongodb.org/" target="_blank" rel="external">MongoDB</a> and <a href="http://redis.io/" target="_blank" rel="external">Redis</a>.</p>
+<p>During our upcoming alpha phase, we’ll be deploying on small instances on a VPS like <a href="https://www.digitalocean.com/" target="_blank" rel="external">DigitalOcean</a>, however during the beta (and ultimately after release), we’ll be deploying to <a href="http://aws.amazon.com/" target="_blank" rel="external">AWS</a> or <a href="https://cloud.google.com/compute/" target="_blank" rel="external">GCE</a>. It’s very simple for us to deploy in virtually any cloud computing service due to our container infrastructure.</p>
+<p>Read more about the <a href="http://stackshare.io/cjsaylor/rockgolem" target="_blank" rel="external">details of our stack</a>.</p>
+<h2 id="We_don’t_ask_our_servers,_we_tell_them-">We don’t ask our servers, we tell them.</h2><p>The principle mechanism that makes our architecture so scalable is our asynchronous message queue and websocket connections. Instead of making a request to the server and waiting on a response before proceeding, we tell the server what the player did over a socket connection and react to messages from the server telling us what it did. This allows us to do a lot of tricks on the client side to hide any latency a player might experience. In addition, all of the services have an option to react to each event in their own way.</p>
+<p>This also makes it so each service can have a “local” (read: local in region) database which allows us to scale horizontally almost infinetly (or until we reach RabbitMQs limits). Each service is listening to all events, which means the individual service can store only the information it needs. You can see all of the events we process in the following graph:</p>
+<p><img src="/img/event-graph.png" alt="All events emitted and listened to by all game services."></p>
+<p><a href="https://twitter.com/young_steveo" target="_blank" rel="external">Stephen</a> made a very nifty <a href="http://gruntjs.com/" target="_blank" rel="external">Grunt</a> task that scans the source code and generates a <a href="https://en.wikipedia.org/wiki/Graphviz" target="_blank" rel="external"><code>.dot</code> file</a> that rendered the graph above.</p>
+<hr>
+<p>That’s it for now. Next time, we’ll talk about how we secure the communication between the client and the server.</p>
 
       
-        <div class="archive-article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/Game-Dev-Diary/Scrolls-Runes-and-Dice.html">
-    <time datetime="2016-04-10T14:08:00.000Z" itemprop="datePublished">Apr 10</time>
-  </a>
-</div>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.rockgolem.com/Game-Dev-Diary/Infrastructure-Journey.html" data-id="cin8xrfpv001b7b0r2pq5exk1" class="article-share-link">Share</a>
       
-    </header>
+        <a href="https://blog.rockgolem.com/Game-Dev-Diary/Infrastructure-Journey.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/containers/">containers</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/development/">development</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/infrastructure/">infrastructure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ops/">ops</a></li></ul>
+
+    </footer>
   </div>
-</article>
   
-    </div></section>
-  </section>
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Game-Dev-Diary/Scrolls-Runes-and-Dice.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Game Dev Diary: Scrolls, Runes, and Dice</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+</section>
       
         <aside id="sidebar">
   
@@ -346,7 +373,7 @@
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
