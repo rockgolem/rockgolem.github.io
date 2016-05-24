@@ -3,19 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Witches &amp; Warlocks: A Digital Trading Card Game | Rock Golem</title>
+  <title>Game Dev Diary: Concerning Timers | Rock Golem</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="What is Witches &amp;amp; Warlocks?Witches &amp;amp; Warlocks (W&amp;amp;W) is an online, multiplayer, digital trading card game.  In W&amp;amp;W you take on the role of a badass spellcrafter with knowledge of long f">
+  <meta name="description" content="In the history of games, time is a major factor in the rules. Whether it’s the time a ball has to bounce in order to grab some metal jacks or the time to take your turn in chess, time is an integral p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Witches & Warlocks: A Digital Trading Card Game">
-<meta property="og:url" content="https://blog.rockgolem.com/Game-Design/Witches-Warlocks-A-Digital-Trading-Card-Game.html">
+<meta property="og:title" content="Game Dev Diary: Concerning Timers">
+<meta property="og:url" content="https://blog.rockgolem.com/Game-Dev-Diary/Game-Dev-Diary-Concerning-Timers.html">
 <meta property="og:site_name" content="Rock Golem">
-<meta property="og:description" content="What is Witches &amp;amp; Warlocks?Witches &amp;amp; Warlocks (W&amp;amp;W) is an online, multiplayer, digital trading card game.  In W&amp;amp;W you take on the role of a badass spellcrafter with knowledge of long f">
-<meta property="og:image" content="https://blog.rockgolem.com/img/rough-card-animation.gif">
-<meta property="og:updated_time" content="2016-04-19T13:16:21.000Z">
+<meta property="og:description" content="In the history of games, time is a major factor in the rules. Whether it’s the time a ball has to bounce in order to grab some metal jacks or the time to take your turn in chess, time is an integral p">
+<meta property="og:updated_time" content="2016-05-23T21:53:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Witches & Warlocks: A Digital Trading Card Game">
-<meta name="twitter:description" content="What is Witches &amp;amp; Warlocks?Witches &amp;amp; Warlocks (W&amp;amp;W) is an online, multiplayer, digital trading card game.  In W&amp;amp;W you take on the role of a badass spellcrafter with knowledge of long f">
+<meta name="twitter:title" content="Game Dev Diary: Concerning Timers">
+<meta name="twitter:description" content="In the history of games, time is a major factor in the rules. Whether it’s the time a ball has to bounce in order to grab some metal jacks or the time to take your turn in chess, time is an integral p">
 <meta name="twitter:creator" content="@rockgolemgames">
   
   
@@ -105,12 +104,12 @@
     
   </div>
 </aside>
-      <section id="main"><article id="post-Witches-Warlocks-A-Digital-Trading-Card-Game" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-Game-Dev-Diary-Concerning-Timers" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       
 	
-		<img src="/img/witches-and-warlocks-banner.png" class="article-banner">
+		<img src="/img/timers_header.jpg" class="article-banner">
 	
 
 
@@ -122,7 +121,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Witches &amp; Warlocks: A Digital Trading Card Game
+      Game Dev Diary: Concerning Timers
     </h1>
   
 
@@ -130,20 +129,20 @@
           
     <div class="article-author">
         <i class="fa fa-user"></i>
-        <span>Stephen Young</span>
+        <span>Chris Saylor</span>
     </div>
 
 
           <div class="article-date">
   <i class="fa fa-calendar"></i>
-  <a href="/Game-Design/Witches-Warlocks-A-Digital-Trading-Card-Game.html">
-    <time datetime="2015-07-05T03:35:24.000Z" itemprop="datePublished">2015-07-04</time>
+  <a href="/Game-Dev-Diary/Game-Dev-Diary-Concerning-Timers.html">
+    <time datetime="2016-05-23T17:49:31.000Z" itemprop="datePublished">2016-05-23</time>
   </a>
 </div>
           
   <div class="article-category">
   	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/Game-Design/">Game Design</a>
+    <a class="article-category-link" href="/categories/Game-Dev-Diary/">Game Dev Diary</a>
   </div>
 
         </div>
@@ -151,43 +150,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="What_is_Witches_&amp;_Warlocks?">What is Witches &amp; Warlocks?</h2><p>Witches &amp; Warlocks (W&amp;W) is an online, multiplayer, digital trading card game.  In W&amp;W you take on the role of a badass spellcrafter with knowledge of long forgotten sorceries.  You build an arsenal of spells, scrolls and runes by collecting cards into grimoires to battle your friends and other players.  A typical game of W&amp;W is a free-for-all battle of wits and carnage between two to six Warlocks.</p>
+        <p>In the history of games, time is a major factor in the rules. Whether it’s the time a ball has to bounce in order to grab some metal jacks or the time to take your turn in chess, time is an integral part of any game, and this game is no exception.</p>
 <a id="more"></a>
-<h2 id="Distinguishing_Mechanics">Distinguishing Mechanics</h2><ul>
-<li><p><strong>Simultaneous Multiplayer Combat</strong> &mdash; Instead of the typical turn-based action of TCGs at-large, the core spellcrafting mechanic has been designed to promote constant action with very little downtime&ndash;even when playing with a total of six players in a match.</p>
-</li>
-<li><p><strong>Combined Combat &amp; Deck Building</strong> &mdash; Most collectible card games fall into one of two categories.  You’re either summoning creatures to attack your opponent a la <em>Magic: The Gathering</em> and it’s various progeny, or you are strategically building a deck to amass victory points, like the game <em>Dominion</em>.  W&amp;W combines these two concepts to create a unique strategic experience.  You may have brought your own cards to the fight, but all players start on even ground and must decide how to build their power as the match progresses.</p>
-</li>
-<li><p><strong>Procedurally Generated Cards</strong> &mdash; Many of the cards in W&amp;W are procedurally generated (think loot in <em>Diablo</em> games, or guns in the <em>Borderlands</em> series).  This is a prominent departure from the predefined sets of cards that exist in every other TCG I can think of.  What it means for the players is a constant stream of new and interesting cards to play with; the game takes on an ever evolving landscape as new effects are added to the card generation scripts and effect combinations are balanced, rebalanced, re-tooled, and re-imagined.</p>
-</li>
-<li><p><strong>Free to Play</strong> &mdash; Yep, it’s free-to-play.  But, wait!  Before you go running for the hills, allow me to elaborate.</p>
-</li>
-</ul>
-<h2 id="100%_Free_to_Play;_0%_Pay_to_Win">100% Free to Play; 0% Pay to Win</h2><p>Free-to-play games (a.k.a. freemium games, a.k.a. soulless bloodsucking annoyance engines) have a well deserved bad rap.  However, there are some shining examples in the wild of how to do it right (e.g. <em>League of Legends</em>), and we want to make a game that follows in their footsteps.  Below is a breakdown of what really sucks about free-to-play, and how Witches &amp; Warlocks measures up.</p>
-<h3 id="No_Paywalls">No Paywalls</h3><p>Paywalls are a baffling feature of free-to-play games that are primarily used to fleece gamers of their cash in order for them to keep playing, remain competitive, or skip monotonous content.  This concept flies in the face of how we think games are meant to be played.  All cards, game mechanics, and game modes will be available to all players without paying a single cent.</p>
-<h3 id="No_Skippable_Timers">No Skippable Timers</h3><p>This is basically just another paywall in which players consume a limited resource every time they play a match and have to wait on a timer for new resources to be generated in order to keep playing (or they can opt to pay for more resources, or skip the timer).  W&amp;W will <em>never</em> include any “wait or pay” mechanics.</p>
-<h3 id="Impossible_to_“Pay_to_Win”">Impossible to “Pay to Win”</h3><p>A feature of many free-to-play games allows players to buy the most useful, most powerful, or most rare content for cash.  In a multiplayer, competitive landscape like W&amp;W, this can be a game-killer.  With that in mind, we’re designing the game so that you and every opponent you face start on equal footing.  Nothing that can be used for strategic advantage in a game can be purchased with cash.  Cards are only available for purchase using an in-game currency that must be earned by playing the game.  Furthermore, you can’t buy the in-game currency.  So, if you get obliterated by an opponent (it’s bound to happen), you can rest easier knowing that it was their skill that won the day, not their credit card.</p>
-<h3 id="No_Advertisements">No Advertisements</h3><p>“We know you want to play a game right now, but first listen to this 30 second message from our sponsors…”  Yeah right.  W&amp;W will never destroy the gaming experience with something as disruptive as ads.</p>
-<h3 id="How_are_we_going_to_make_money?">How are we going to make money?</h3><p>I’ll do a proper write-up of our monetization strategy in a future post, but suffice it to say that we will collect payments primarily through cosmetic micro-transactions (and a sprinkling of a few clever, out-of-game features).  When you play W&amp;W, you create an avatar that represents your character in the game.  We are planning to offer a plethora of cosmetic upgrades to this avatar including everything from skins, clothing options, special effects, character models, etc.</p>
-<h3 id="When_Can_You_Play?">When Can You Play?</h3><p>We’ve come a long way in development, and have crossed several milestones:</p>
-<ul>
-<li>We built a working physical prototype out of card stock to quickly test out the features and ensure the game is fun to play. (hint: it is!)</li>
-<li>We built a highly advanced server architecture/framework that is basically a cluster of micro-services, each with it’s own “job” to fulfill. (seriously, it’s pretty badass and built with scaling in mind from the start.  I’ll write a technical blog about it in the future.)</li>
-<li>We have some initial, rudimentary card animations and client-side interactions. (basically, we’re very close to having an almost workable/playable system)</li>
-</ul>
-<p>Here’s a rough sneak peak:</p>
-<p><img src="/img/rough-card-animation.gif" alt="Rough Card Animation"></p>
-<p>We still have a long way to go, but I hope this post has made you as excited as we are about it.  Thanks for reading!</p>
+<p>We have recently built in the use of timers in three distinct use cases: preventing players from stalling the game, waiting for players to rejoin after all disconnect, and controlling animations. I’ll go into some technical detail at the end.</p>
+<h2 id="Simultaneous_play…almost">Simultaneous play…almost</h2><p>One major feature of our game is that it is quasi-turn based. It is a mix of both realtime play (building spells, buying cards from the vault, casting scrolls, etc) and turn-based play (selecting targets and resolving combat). Anytime there is some sort of turn for a player to make a decision, everyone else has to wait. What happens when a player never makes their decision? A player can’t halt the game indefinitely or it just wouldn’t be fun, so we designed some phase timers to expire a player’s turn if they are taking too long. If everyone is engaged in the game, you may never see a timer expire as it can be quite fast-paced. These timers represent the longest period any of these phases <em>should</em> take before it becomes not fun.</p>
+<h2 id="To_Rejoin_or_not_to_rejoin">To Rejoin or not to rejoin</h2><p>We keep state for each player to know if they are part of an active game. If the client quits or is disconnected, the first thing we do upon loading up the client is see if the player has an active game. If so, we put them right back into the action. We use a timer once all players have disconnected from an active game that hasn’t concluded yet, and in the event of no-one rejoining within a time limit, we end the game. We’re still in the process of deciding how this effects player’s stats or win/loss record so stay tuned for that.</p>
+<h2 id="Animation_timing">Animation timing</h2><p>In our original design, we allowed the client to get events from the server as quickly as they came in, and then we would buffer them in the client so that they appeared in sequence and properly delayed based on what was animating. We have gone away from this design in all but a few places that have sequential dependencies. Certain events can’t be delayed from the server (ie when a timer starts), which means that a players time in spell or combat phase was being consumed by animation time. To solve this, we started setting a timer at key moments on the server side to account for average animation time, so that future events would not occur until after the timer expired. This allows us to animate actions and have server timers be in sync with the client.</p>
+<h2 id="Distributed_timers">Distributed timers</h2><p><strong>Here be dragons</strong>.</p>
+<p>Now we’ll go into the technical details of how we pulled this off. If you read <a href="/Game-Dev-Diary/Infrastructure-Journey.html">my previous post about our system</a>, you’ll know we use a microservice approach, one of which is a timer service. Since our architecture is built for running multiple instances of these services for scale, we had to get a bit creative in our approach to timers. We use nodejs, so there is already a <code>setTimeout</code> function available, but there are two main reasons we can’t use it:</p>
+<ol>
+<li>What happens if that particular instance of the timer service goes down or is restarted? (the game would stop progressing)</li>
+<li>What if an event comes in that should cancel a timer? With multiple timer services running, we can’t guarantee the service that has the timer will receive the cancellation event.</li>
+</ol>
+<p>Instead, we decided to use <a href="http://redis.io/" target="_blank" rel="external">Redis</a> as a stateful backend for all our timers and a library called <a href="https://www.npmjs.com/package/dtimer" target="_blank" rel="external">dtimer</a> to coordinate. This setup allows for one timer service to start a timer, and any timer service can cancel or listen to its expiration.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.rockgolem.com/Game-Design/Witches-Warlocks-A-Digital-Trading-Card-Game.html" data-id="cioli80dy0003l00rwpsqg912" class="article-share-link">Share</a>
+      <a data-url="https://blog.rockgolem.com/Game-Dev-Diary/Game-Dev-Diary-Concerning-Timers.html" data-id="cioli80eq001kl00rep0ltp15" class="article-share-link">Share</a>
       
-        <a href="https://blog.rockgolem.com/Game-Design/Witches-Warlocks-A-Digital-Trading-Card-Game.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://blog.rockgolem.com/Game-Dev-Diary/Game-Dev-Diary-Concerning-Timers.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cards/">cards</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design/">design</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/development/">development</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/infrastructure/">infrastructure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/timers/">timers</a></li></ul>
 
     </footer>
   </div>
@@ -195,19 +180,10 @@
     
 <nav id="article-nav">
   
-    <a href="/Game-Design/Initial-Card-Designs-and-Evolution-of-Game-Rules.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Initial Card Designs and Evolution of Game Rules
-        
-      </div>
-    </a>
   
-  
-    <a href="/News/New-Website-Blog.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Game-Dev-Diary/Infrastructure-Journey.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">New Website Blog</div>
+      <div class="article-nav-title">Game Dev Diary: Infrastructure Journey</div>
     </a>
   
 </nav>
