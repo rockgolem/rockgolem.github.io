@@ -1,5 +1,7 @@
 title: 'Game Dev Diary: End of 2016'
 date: 2016-12-22 23:13:20
+author: Chris Saylor
+category: Game Dev Diary
 tags:
   - development
   - indiedev
