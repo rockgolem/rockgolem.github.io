@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: Game Design | Rock Golem</title>
+  <title>Game Dev Diary: End of 2016 | Rock Golem</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rock Golem">
-<meta property="og:url" content="https://blog.rockgolem.com/categories/Game-Design/index.html">
+  <meta name="description" content="It has been a very busy year for us. We are slowly-but-steadily approachingpre-alpha stage. Our biggest achievment for the year was completing the game loop.Our core game loop works from start to fini">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Game Dev Diary: End of 2016">
+<meta property="og:url" content="https://blog.rockgolem.com/uncategorized/Game-Dev-Diary-End-of-2016.html">
 <meta property="og:site_name" content="Rock Golem">
-<meta property="og:description">
+<meta property="og:description" content="It has been a very busy year for us. We are slowly-but-steadily approachingpre-alpha stage. Our biggest achievment for the year was completing the game loop.Our core game loop works from start to fini">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/157755/21443407/f3fe4edc-c872-11e6-94ba-5d79de18bd96.gif">
+<meta property="og:updated_time" content="2016-12-23T04:32:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rock Golem">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Game Dev Diary: End of 2016">
+<meta name="twitter:description" content="It has been a very busy year for us. We are slowly-but-steadily approachingpre-alpha stage. Our biggest achievment for the year was completing the game loop.Our core game loop works from start to fini">
 <meta name="twitter:creator" content="@rockgolemgames">
   
   
@@ -103,139 +105,83 @@
     
   </div>
 </aside>
-      <section id="main">
-    <section class="archives-wrap">
-    <div class="archive-category-wrap">
-      <span class="archive-category">Game Design</span>
-    </div>
-    <div class="archives">
+      <section id="main"><article id="post-Game-Dev-Diary-End-of-2016" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
     
-    <div class="archive-article-thumbnail">
-      <a href="/Game-Design/The-Deck-Building-Mechanic.html" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-    </div>
     
-    <header class="archive-article-header">
-      
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Game-Design/The-Deck-Building-Mechanic.html">The Deck Building Mechanic</a>
+    <h1 class="article-title" itemprop="name">
+      Game Dev Diary: End of 2016
     </h1>
   
 
-      
-        <div class="archive-article-date">
+        <div class="article-meta">
+          
+
+          <div class="article-date">
   <i class="fa fa-calendar"></i>
-  <a href="/Game-Design/The-Deck-Building-Mechanic.html">
-    <time datetime="2016-03-23T04:27:42.000Z" itemprop="datePublished">2016 Mar 23</time>
+  <a href="/uncategorized/Game-Dev-Diary-End-of-2016.html">
+    <time datetime="2016-12-23T04:13:20.000Z" itemprop="datePublished">2016-12-22</time>
   </a>
 </div>
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-    </header>
-  </div>
-</article>
-    
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    
-    <div class="archive-article-thumbnail">
-      <a href="/Game-Design/Procedurally-Generated-Cards-in-Witches-and-Warlocks.html" class="thumbnail">
-  
-    <span style="background-image:url(/img/mog-mask.jpg)" alt="Procedurally Generated Cards in Witches and Warlocks" class="thumbnail-image"></span>
-  
-</a>
-    </div>
-    
-    <header class="archive-article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Game-Design/Procedurally-Generated-Cards-in-Witches-and-Warlocks.html">Procedurally Generated Cards in Witches and Warlocks</a>
-    </h1>
-  
+        <p>It has been a very busy year for us. We are slowly-but-steadily approaching<br>pre-alpha stage. Our biggest achievment for the year was completing the game loop.<br>Our core game loop works from start to finish with all stages and<br>a winning condition.</p>
+<p><strong>HURRAY!</strong></p>
+<a id="more"></a>
+<p>We still have quite a ways to go. While the game is playable, it isn’t terribly<br>interesting since there is not a lot of card effect variaty. We have put a big focus<br>on completing a large list of card traits in order to start seeing some strategy<br>start to emerge from game play.</p>
+<h2 id="Game_Changes">Game Changes</h2><p>One major change we’ve made in the core gameplay is how our scrolls (instant spells)<br>function. They no longer apply their effect immediately, but rather are now applied<br>to the target as a debuff. Their effects get applied at the beginning of<br>the combat phase. The reason we decided to delay the scroll effects were two fold:</p>
+<ol>
+<li>During spell crafting, it can be a bit chaotic and you may miss an enemy player<br>hitting you with instant spells.</li>
+<li>There is literally no way to react to or prevent enemy scroll effects hitting you.<br>Depending on the effect of the scroll, this could drastically change your strategy<br>for the next combat phase and we felt it was a little unfair to the player not to<br>have an opportunity to react (even if the opportunity is minimal).</li>
+</ol>
+<p>Here’s a sample of how it will look:</p>
+<p><img src="https://cloud.githubusercontent.com/assets/157755/21443407/f3fe4edc-c872-11e6-94ba-5d79de18bd96.gif" alt="Now smite applies a damage debuff instead of doing the damage immediately."></p>
+<h2 id="What_does_next_year_bring?">What does next year bring?</h2><p>Traits. Lots of traits. We will continue to add (and evaluate) new traits to be<br>available on our cards. Once we have what we feel is enough diversity in strategy<br>with traits, we will divide our efforts on art and sound work.</p>
 
       
-        <div class="archive-article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/Game-Design/Procedurally-Generated-Cards-in-Witches-and-Warlocks.html">
-    <time datetime="2016-03-22T22:12:42.000Z" itemprop="datePublished">2016 Mar 22</time>
-  </a>
-</div>
-      
-    </header>
-  </div>
-</article>
-    
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    
-    <div class="archive-article-thumbnail">
-      <a href="/Game-Design/Initial-Card-Designs-and-Evolution-of-Game-Rules.html" class="thumbnail">
-  
-    <span style="background-image:url(/img/card-design-spell-v1.png)" alt="Initial Card Designs and Evolution of Game Rules" class="thumbnail-image"></span>
-  
-</a>
     </div>
-    
-    <header class="archive-article-header">
+    <footer class="article-footer">
+      <a data-url="https://blog.rockgolem.com/uncategorized/Game-Dev-Diary-End-of-2016.html" data-id="cix1axgbp001kk20r3vlmp53z" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Game-Design/Initial-Card-Designs-and-Evolution-of-Game-Rules.html">Initial Card Designs and Evolution of Game Rules</a>
-    </h1>
-  
+        <a href="https://blog.rockgolem.com/uncategorized/Game-Dev-Diary-End-of-2016.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/development/">development</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gamedev/">gamedev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/indiedev/">indiedev</a></li></ul>
 
-      
-        <div class="archive-article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/Game-Design/Initial-Card-Designs-and-Evolution-of-Game-Rules.html">
-    <time datetime="2015-07-13T14:45:33.000Z" itemprop="datePublished">2015 Jul 13</time>
-  </a>
-</div>
-      
-    </header>
+    </footer>
   </div>
-</article>
+  
     
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    
-    <div class="archive-article-thumbnail">
-      <a href="/Game-Design/Witches-Warlocks-A-Digital-Trading-Card-Game.html" class="thumbnail">
+<nav id="article-nav">
   
-    <span style="background-image:url(/img/witches-and-warlocks-thumbnail.png)" alt="Witches &amp; Warlocks: A Digital Trading Card Game" class="thumbnail-image"></span>
   
-</a>
-    </div>
-    
-    <header class="archive-article-header">
-      
+    <a href="/Game-Dev-Diary/Game-Dev-Diary-Concerning-Timers.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Game Dev Diary: Concerning Timers</div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Game-Design/Witches-Warlocks-A-Digital-Trading-Card-Game.html">Witches &amp; Warlocks: A Digital Trading Card Game</a>
-    </h1>
-  
+</nav>
 
-      
-        <div class="archive-article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/Game-Design/Witches-Warlocks-A-Digital-Trading-Card-Game.html">
-    <time datetime="2015-07-05T03:35:24.000Z" itemprop="datePublished">2015 Jul 4</time>
-  </a>
-</div>
-      
-    </header>
-  </div>
+  
 </article>
-    
-    </div></section>
-    </section>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+</section>
       
         <aside id="sidebar">
   
@@ -405,7 +351,7 @@
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
